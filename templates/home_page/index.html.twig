@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue{% endblock %}
+{% block title %}Sandra Pla Libourel{% endblock %}
 
 {% block body %}
-    <h1>Projet test pour checkpoint4</h1>
+    <div class="background">
+    <img class="background-img" src="{{ asset('build/images/background.jpg') }}" alt="color image background">
+    </div>
+    <div class="home-page-intro">
+        <h1 class="name">Sandra Pla Libourel</h1>
+        <h2 class="job-title">Développeuse web</h2>
+    </div>
 {% endblock %}
