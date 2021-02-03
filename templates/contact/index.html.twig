@@ -5,6 +5,13 @@
 {% block body %}
     <div class="contact-page">
         <h1 class="contact-title">Contacte-moi</h1>
+        <div class="flash-message">
+            {% for messages in app.flashes(['success']) %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endfor %}
+        </div>
         <div class="contact-section">
             <h2 class="contact-section-title"># Mes coordonnées</h2>
             <ul>
@@ -13,14 +20,14 @@
                 <li>Bordeaux</li>
             </ul>
         </div>
-            <div class="contact-section">
+            <div class="contact-section2">
                 <h2 class="contact-section-title"># Ou si tu le préfères ... </h2>
                 <div class="contact-form">
                     {{ form_start(contact_form) }}
                     {{ form_widget(contact_form) }}
-                    <input type='submit' value='Envoyer le message'>
+                    <input class="btn-form" type='submit' value='Envoyer le message'>
                     {{ form_end(contact_form) }}
                 </div>
             </div>
-    </div>
+        </div>
 {% endblock %}

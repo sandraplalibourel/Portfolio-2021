@@ -32,10 +32,15 @@ class ContactController extends AbstractController
                 ->from('e740c2b349-44616e@inbox.mailtrap.io')
                 ->to('e740c2b349-44616e@inbox.mailtrap.io')
                 ->subject('Demande de contact via portfolio')
-                ->text('Sender : '. $contactFormData['email'] . \PHP_EOL .
-                    $contactFormData['message']);
+                ->text('Bonjour, tu as un nouveau message sur ton portfolio');
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contactFormData);
+            $entityManager->flush();
 
             $mailer->send($email);
+
+            $this->addFlash('success', 'Votre message à bien été envoyé.');
 
             return $this->redirectToRoute('contact');
         }

@@ -1,10 +1,11 @@
 body {
-    background-color: #36296C;
     font-family: 'Fira Mono', monospace;
     height: 100%;
     width: 100%;
     color: #B73A61;
+    background-color: #36296C;
 }
+
 .background {
     position: absolute;
     height: 100%;
@@ -31,10 +32,61 @@ body {
     position: sticky;
 }
 /*-- ANIMATIONS --*/
+.name {
+    animation: fadeInRight 3s;
+    margin-left: 2em;
+    margin-top: 2em;
+}
 
+.job-title {
+    animation: fadeInLeft 3s;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 /*-- NAVBAR --*/
+.navbar {
+    display: flex;
+    ul {
+        color: #2FD8E8;
+    }
+    a {
+        color: #2FD8E8;
+    }
+    a:hover {
+        color: #2FD8E8;
+    }
+}
 
+.menu-logo {
+    margin-left: 75em;
+}
 
 /*-- FOOTER --*/
 footer {
@@ -74,10 +126,11 @@ a{
 
 .project {
     display: flex;
-    padding: 1em;
+    margin-bottom: 1em;
     p {
         border-left: 2px dotted;
         height: fit-content;
+        padding-left: 1em;
     }
 }
 
@@ -99,6 +152,9 @@ a{
 }
 
 /*-- CONTACT PAGE--*/
+.flash-message {
+    color: #2FD8E8;
+}
 
 .contact-page {
     color: #2FD8E8;
@@ -106,14 +162,39 @@ a{
 
 .contact-title {
     margin-left: 0.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 }
 
 .contact-section {
     margin-left: 10em;
     margin-bottom: 3em;
+    color: #B73A61;
     ul {
         list-style: none;
         border-left: 2px dotted;
+    }
+}
+
+.contact-section2 {
+    margin-left: 40em;
+    color: #B73A61;
+}
+
+.contact-section-title {
+    margin-bottom: 1em;
+}
+
+.contact-form {
+    label {
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+    }
+    input {
+        border-radius: 0.5em;
+        background-color: #36296C;
+        border: 1px solid #B73A61;
+    }
+    .btn-form {
+        color: #B73A61;
     }
 }
