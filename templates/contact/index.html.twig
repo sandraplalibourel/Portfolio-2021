@@ -8,7 +8,7 @@
         <div class="flash-message">
             {% for messages in app.flashes(['success']) %}
                 {% for message in messages %}
-                    {{ message }}
+                   <p class="message-success"> {{ message }}</p>
                 {% endfor %}
             {% endfor %}
         </div>
