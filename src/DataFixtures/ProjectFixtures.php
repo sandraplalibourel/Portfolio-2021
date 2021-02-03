@@ -10,22 +10,22 @@ class ProjectFixtures extends Fixture
 {
     public const PROJECTS = [
         [
-            'name' => 'Projet 1',
+            'name' => 'Site statique',
             'year' => '2020',
-            'description' => 'description projet 1',
-            'technologies' => '1',
+            'description' => 'Réalisation d\'un site fictif & statique pour un commerce',
+            'technologies' => 'HTML & CSS',
         ],
         [
-            'name' => 'Projet 2',
+            'name' => 'Techwatch - Gestionnaire de veilles technologiques',
             'year' => '2020',
-            'description' => 'description projet 2',
-            'technologies' => '1',
+            'description' => 'Réalisation d\'un site de partage de veilles technologiques',
+            'technologies' => 'PHP, HTML, CSS, SQL ',
         ],
         [
-            'name' => 'Projet 3',
+            'name' => 'Authentic-Trip - Créateur de carnets de voyage sur mesure',
             'year' => '2021',
-            'description' => 'description projet 3',
-            'technologies' => '1',
+            'description' => 'Réalisation d\'une application web (front & back) pour la création de carnets de voyages personnalisés',
+            'technologies' => 'PHP, Symfony, HTML, CSS, SQL',
         ]
     ];
 

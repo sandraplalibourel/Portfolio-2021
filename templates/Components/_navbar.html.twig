@@ -9,9 +9,10 @@
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">A propos</a></li>
-                        <li><a class="dropdown-item" href="#">Mes projets</a></li>
-                        <li><a class="dropdown-item" href="#">Contacte-moi</a></li>
+                        <li><a class="dropdown-item" href="{{ path('home_page') }}">Accueil</a></li>
+                        <li><a class="dropdown-item" href="{{ path('about') }}">A propos</a></li>
+                        <li><a class="dropdown-item" href="{{ path('project') }}">Mes projets</a></li>
+                        <li><a class="dropdown-item" href="{{ path('contact') }}">Contact</a></li>
                     </ul>
                 </li>
             </ul>

@@ -39,6 +39,26 @@ body {
 /*-- FOOTER --*/
 footer {
     position: absolute;
-    bottom: -50px;
+    bottom: -30px;
     width: 100%;
 }
+
+/*-- PROJECTS PAGE--*/
+.project-page {
+    margin-left: 10em;
+    margin-top: 5em;
+}
+
+.project-title {
+    margin-left: 0.5em;
+}
+
+.project-img {
+    width: 20%;
+    margin: 1em 3em 1em 3em;
+}
+
+.project {
+    display: flex;
+}
+
