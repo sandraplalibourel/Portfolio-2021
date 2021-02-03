@@ -62,3 +62,18 @@ footer {
     display: flex;
 }
 
+/*-- ABOUT PAGE--*/
+
+.about-title {
+    margin-left: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.about-section {
+    margin-left: 10em;
+    margin-bottom: 3em;
+    ul {
+        list-style: none;
+        border-left: 2px dotted;
+    }
+}
