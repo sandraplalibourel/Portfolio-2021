@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes projets{% endblock %}
+
+{% block body %}
+
+    <h1 class="project-title">Parlons projets</h1>
+    <div class="project-page">
+        <div class="project">
+            <p> ['{{ project[0].name }}' ,
+            'Réalisé en' =>  '{{ project[0].year }}' ,
+                '{{ project[0].description }}']<br><a target="_blank" href="https://github.com/sandraplalibourel/Projet1-HPdecoratio-Wild-Code-School">{lien vers le code par ici}</a></p>
+                <a href="#" class="project-img" ><img class="project-img" src="{{ asset('build/images/PROJET1.png') }}" alt="screenshot project one"></a>
+        </div>
+
+        <div class="project">
+               <a class="project-img" href="#"><img class="project-img" src="{{ asset('build/images/PROJET2.png') }}" alt="screenshot project two"></a>
+            <p>['{{ project[1].name }}' ,
+            'Réalisé en' =>  '{{ project[1].year }}' ,
+            '{{ project[1].description }}']<br><a target="_blank" href="https://github.com/sandraplalibourel/Projet2-Techwatch-Wild-Code-School">{lien vers le code par ici}</a></p>
+        </div>
+
+        <div class="project">
+            <p>['{{ project[2].name }}' ,
+           'Réalisé en' =>  '{{ project[2].year }}' ,
+            '{{ project[2].description }}']<br><a target="_blank" href="https://github.com/sandraplalibourel/bordeaux-202009-php-project3-authentik">{lien vers le code par ici}</a></p>
+                <a href="#" class="project-img" ><img class="project-img" src="{{ asset('build/images/PROJET3.png') }}" alt="screenshot project three"></a>
+        </div>
+    </div>
+{% endblock %}

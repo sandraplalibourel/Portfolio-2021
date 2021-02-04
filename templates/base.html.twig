@@ -2,12 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <script src="https://kit.fontawesome.com/40277b0ce9.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="public/build/app.css">
 
-        {% block javascripts %}{% endblock %}
+        <title>{% block title %}Sandra Pla Libourel{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+{% include'Components/_navbar.html.twig' %}
+
+        {% block body %}
+        {% endblock %}
+
+        <script src="public/build/app.js"></script>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
