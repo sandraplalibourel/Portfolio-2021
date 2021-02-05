@@ -35,9 +35,24 @@ class Project
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Technology::class, mappedBy="project")
+     * @ORM\ManyToMany(targetEntity=Technology::class, mappedBy="project", cascade={"persist"})
      */
     private $technologies;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $github;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $picture;
+
+    public function __toString()
+    {
+        return $this->id . '-' . $this->name;
+    }
 
     public function __construct()
     {
@@ -108,6 +123,30 @@ class Project
         if ($this->technologies->removeElement($technology)) {
             $technology->removeProject($this);
         }
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(?string $github): self
+    {
+        $this->github = $github;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
