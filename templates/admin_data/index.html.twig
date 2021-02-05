@@ -3,15 +3,40 @@
 {% block title %}Administrateur{% endblock %}
 
 {% block body %}
-    <div class="admin-page">
-<a href="{{ path('app_logout') }}">Déconnexion</a>
-<h1>Liste des messages reçus</h1>
-    {% for message in messages %}
+<div class="admin-page">
+    <a href="{{ path('app_logout') }}">Déconnexion</a>
+
+    <div class="flash-message">
+        {% for messages in app.flashes(['success']) %}
+            {% for message in messages %}
+                <p class="message-success"> {{ message }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <h1>Liste des messages reçus</h1>
+        {% for message in messages %}
+            <ul>
+                <li>Nom : {{ message.name }}</li>
+                <li> Email : {{ message.email }}</li>
+                <li> Message : {{ message.message }}</li>
+            </ul>
+        {% endfor %}
+    <h1>Nouveau projet</h1>
+        <div class="contact-form">
+            {{ form_start(project_form) }}
+                {{ form_widget(project_form) }}
+                <input class="btn-form" type='submit' value='Ajouter'>
+            {{ form_end(project_form) }}
+        </div>
+    <h1>Liste des projets</h1>
+    {% for project in projects %}
         <ul>
-            <li>Nom : {{ message.name }}</li>
-            <li> Email : {{ message.email }}</li>
-            <li> Message : {{ message.message }}</li>
+            <li>Nom : {{ project.name }}</li>
+            <li>Année : {{ project.year }}</li>
+            <li>Description : {{ project.description }}</li>
+            <a href="{{ path('project_crud') }}">Editer/ supprimer le projet/</a>
         </ul>
     {% endfor %}
-    </div>
+</div>
 {% endblock %}

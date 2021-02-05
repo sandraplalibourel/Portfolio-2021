@@ -25,9 +25,14 @@ class Technology
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="technologies")
+     * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="technologies", cascade={"persist"})
      */
     private $project;
+
+    public function __toString()
+    {
+        return $this->id . '-' . $this->name;
+    }
 
     public function __construct()
     {
