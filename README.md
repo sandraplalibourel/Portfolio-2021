@@ -5,3 +5,5 @@ Projet personnel de fin de formation à la Wild Code School de Bordeaux. Ceci es
 Ce projet présente mes projets, mon expérience professionnelle et mon parcours scolaire.
 
 La préparation du projet (Modélisation de la base de données, maquettes et user stories) sont disponibles dans le dossier "Ressources".
+
+![alt text](https://github.com/[sandraplalibourel]/[Checkpoint4---Portfolio]/blob/[master]/PORTFOLIO.png?raw=true)
