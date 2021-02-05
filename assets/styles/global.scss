@@ -6,19 +6,10 @@ body {
     background-color: #36296C;
 }
 
-.background {
-    position: absolute;
-    height: 100%;
-}
-
 .home-page {
    width: 100%;
 }
 
-.background-img {
-    width: 100%;
-    height: 100%;
-}
 
 .name {
     font-size: 6em;
@@ -98,12 +89,12 @@ body {
     background: none;
 }
 
-/*-- FOOTER --*/
+/*-- FOOTER --
 footer {
     position: absolute;
     bottom: -30px;
     width: 100%;
-}
+}*/
 
 /*-- PROJECTS PAGE--*/
 .project-page {
@@ -119,9 +110,18 @@ footer {
 .project-img {
     width: 30%;
     margin: 1em 3em 5em 19em;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    .project-img {
+        box-shadow: 0 10px 26px -3px black;
+    }
+
 }
 .project-img:hover {
-
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 a:hover {
@@ -164,6 +164,30 @@ a{
         border-left: 2px dotted;
     }
 }
+
+.about-section-languages {
+    margin-left: 10em;
+    margin-bottom: 3em;
+    display: flex;
+    ul {
+        list-style: none;
+        border-left: 2px dotted;
+    }
+}
+
+.about-section-title {
+    margin-bottom: 1em;
+}
+
+.about-section-title-languages {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+.list-languages {
+    margin-right: 2em;
+}
+
 
 /*-- CONTACT PAGE--*/
 .flash-message {
@@ -251,16 +275,7 @@ a{
 
 /* -- MEDIA QUERIES ---*/
 @media screen and (max-width: 630px) {
-    html {
-        width: 78em;
-        background-color: red;
-    }
-    .menu-logo {
-        margin-left: 1em;
-    }
-
 }
 
 @media screen and (max-width: 989px) and (min-width: 630px) {
-
 }
