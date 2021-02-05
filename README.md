@@ -6,4 +6,4 @@ Ce projet présente mes projets, mon expérience professionnelle et mon parcours
 
 La préparation du projet (Modélisation de la base de données, maquettes et user stories) sont disponibles dans le dossier "Ressources".
 
-![alt text](https://github.com/[sandraplalibourel]/[Checkpoint4---Portfolio]/blob/[master]/PORTFOLIO.png?raw=true)
+![alt portfolio screenshot](https://github.com/[sandraplalibourel]/[Checkpoint4---Portfolio]/blob/[master]/PORTFOLIO.png?raw=true)
