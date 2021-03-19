@@ -35,7 +35,9 @@
             <li>Nom : {{ project.name }}</li>
             <li>Année : {{ project.year }}</li>
             <li>Description : {{ project.description }}</li>
-            <a href="{{ path('project_crud') }}">Editer/ supprimer le projet/</a>
+            <li>Technos utilisées :{% for technology in project.technologies %}  {{ technology.name }} // {% endfor %}</li>
+            <a href="{{ path('project_edit', {'id' : project.id }) }}">Editer le projet</a><br>
+            {% include'project_crud/_delete.html.twig' %}
         </ul>
     {% endfor %}
 </div>
