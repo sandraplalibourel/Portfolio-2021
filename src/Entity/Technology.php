@@ -57,9 +57,9 @@ class Technology
     }
 
     /**
-     * @return Collection|Project[]
+     * @return ArrayCollection|Project[]
      */
-    public function getProject(): Collection
+    public function getProject()
     {
         return $this->project;
     }

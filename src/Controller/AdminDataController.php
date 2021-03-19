@@ -2,24 +2,21 @@
 
 namespace App\Controller;
 
-use App\DataFixtures\TechnologiesFixtures;
 use App\Entity\Project;
-use App\Entity\Technology;
 use App\Form\ProjectcType;
 use App\Repository\ContactFormRepository;
 use App\Repository\ProjectRepository;
-use App\Repository\TechnologyRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\ORM\EntityManager;
 
 class AdminDataController extends AbstractController
 {
     /**
      * @Route("/admin", name="admin_data")
      * @param ContactFormRepository $contactFormRepository
+     * @param ProjectRepository $projectRepository
      * @param Request $request
      * @return Response
      */
